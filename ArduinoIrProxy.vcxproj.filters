@@ -10,9 +10,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.ArduinoIrProxy.vsarduino.h" />
-    <ClInclude Include="Firmware\IActuator.h">
-      <Filter>Firmware</Filter>
-    </ClInclude>
     <ClInclude Include="Firmware\IRemoteControl.h">
       <Filter>Firmware</Filter>
     </ClInclude>
@@ -23,6 +20,9 @@
       <Filter>Firmware\Arduino</Filter>
     </ClInclude>
     <ClInclude Include="EUnifiedActions.h" />
+    <ClInclude Include="Firmware\AActuator.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ArduinoIrProxy.ino" />

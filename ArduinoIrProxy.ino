@@ -9,14 +9,13 @@ enum Settings
 	RECV_PIN = 11
 };
 
-IRrecv irRecv(RECV_PIN);
-decode_results decodedResults;
-Firmware::CambridgeAudio::Rc_Sr20_Cd5_Cd10 remoteControl;
-
 EUnifiedActions recievedCommand{EUnifiedActions::BUTTON_NOT_PRESSED};
 
-Firmware::Arduino::ProMicro32U4 actuator;
+decode_results decodedResults;
+IRrecv irRecv(RECV_PIN);
 
+Firmware::CambridgeAudio::Rc_Sr20_Cd5_Cd10 remoteControl;
+Firmware::Arduino::ProMicro32U4 actuator;
 
 void setup()
 {

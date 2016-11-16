@@ -80,7 +80,7 @@
   <ItemGroup>
     <ClInclude Include="Firmware\Arduino\ProMicro32U4.h" />
     <ClInclude Include="Firmware\CambridgeAudio\Rc_Sr20_Cd5_Cd10.h" />
-    <ClInclude Include="Firmware\IActuator.h" />
+    <ClInclude Include="Firmware\AActuator.h" />
     <ClInclude Include="Firmware\IRemoteControl.h" />
     <ClInclude Include="EUnifiedActions.h" />
     <ClInclude Include="__vm\.ArduinoIrProxy.vsarduino.h" />
