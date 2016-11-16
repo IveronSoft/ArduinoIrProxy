@@ -1,13 +1,12 @@
 #pragma once
-#include "../EUnifiedActions.h"
 
 namespace Firmware
 {
-	class IActuator
+	class AActuator
 	{
 	public:
-		IActuator() {}
-		virtual ~IActuator() {}
+		AActuator() {}
+		virtual ~AActuator() {}
 
 		inline virtual bool doPause();
 		inline virtual bool doStop();
@@ -76,327 +75,327 @@ namespace Firmware
 		inline virtual bool doDigitalZero();
 	};
 
-	bool Firmware::IActuator::doPause()
+	bool Firmware::AActuator::doPause()
 	{
 		return false;
 	}
 
-	bool Firmware::IActuator::doStop()
+	bool Firmware::AActuator::doStop()
 	{
 		return false;
 	}
 
-	bool Firmware::IActuator::doNext()
+	bool Firmware::AActuator::doNext()
 	{
 		return false;
 	}
 
-	bool Firmware::IActuator::doPrevious()
+	bool Firmware::AActuator::doPrevious()
 	{
 		return false;
 	}
 
-	bool Firmware::IActuator::doForward()
+	bool Firmware::AActuator::doForward()
 	{
 		return false;
 	}
 
-	bool Firmware::IActuator::doRewind()
+	bool Firmware::AActuator::doRewind()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doOne()
+	inline bool AActuator::doOne()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doTwo()
+	inline bool AActuator::doTwo()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doThree()
+	inline bool AActuator::doThree()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doFour()
+	inline bool AActuator::doFour()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doFive()
+	inline bool AActuator::doFive()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSix()
+	inline bool AActuator::doSix()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSeven()
+	inline bool AActuator::doSeven()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doEight()
+	inline bool AActuator::doEight()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doNine()
+	inline bool AActuator::doNine()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doZero()
+	inline bool AActuator::doZero()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doOpen()
+	inline bool AActuator::doOpen()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doClose()
+	inline bool AActuator::doClose()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doMute()
+	inline bool AActuator::doMute()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSelSpkrs()
+	inline bool AActuator::doSelSpkrs()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doStereoMono()
+	inline bool AActuator::doStereoMono()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doTunerMode()
+	inline bool AActuator::doTunerMode()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doVolUp()
+	inline bool AActuator::doVolUp()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doVolDown()
+	inline bool AActuator::doVolDown()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doTunerScanUp()
+	inline bool AActuator::doTunerScanUp()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doTunerScanDown()
+	inline bool AActuator::doTunerScanDown()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetOne()
+	inline bool AActuator::doPresetOne()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetTwo()
+	inline bool AActuator::doPresetTwo()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetThree()
+	inline bool AActuator::doPresetThree()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetFour()
+	inline bool AActuator::doPresetFour()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetFive()
+	inline bool AActuator::doPresetFive()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetSix()
+	inline bool AActuator::doPresetSix()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetSeven()
+	inline bool AActuator::doPresetSeven()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetEight()
+	inline bool AActuator::doPresetEight()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetNine()
+	inline bool AActuator::doPresetNine()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doPresetZero()
+	inline bool AActuator::doPresetZero()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSrcSelect()
+	inline bool AActuator::doSrcSelect()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSrcFm()
+	inline bool AActuator::doSrcFm()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSrcAm()
+	inline bool AActuator::doSrcAm()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSrcDvd()
+	inline bool AActuator::doSrcDvd()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSrcCd()
+	inline bool AActuator::doSrcCd()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSrcMp3()
+	inline bool AActuator::doSrcMp3()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSrcAux()
+	inline bool AActuator::doSrcAux()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSrcPhono()
+	inline bool AActuator::doSrcPhono()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doSrcTape()
+	inline bool AActuator::doSrcTape()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogOne()
+	inline bool AActuator::doAnalogOne()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogTwo()
+	inline bool AActuator::doAnalogTwo()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogThree()
+	inline bool AActuator::doAnalogThree()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogFour()
+	inline bool AActuator::doAnalogFour()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogFive()
+	inline bool AActuator::doAnalogFive()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogSix()
+	inline bool AActuator::doAnalogSix()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogSeven()
+	inline bool AActuator::doAnalogSeven()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogEight()
+	inline bool AActuator::doAnalogEight()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogNine()
+	inline bool AActuator::doAnalogNine()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doAnalogZero()
+	inline bool AActuator::doAnalogZero()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalOne()
+	inline bool AActuator::doDigitalOne()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalTwo()
+	inline bool AActuator::doDigitalTwo()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalThree()
+	inline bool AActuator::doDigitalThree()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalFour()
+	inline bool AActuator::doDigitalFour()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalFive()
+	inline bool AActuator::doDigitalFive()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalSix()
+	inline bool AActuator::doDigitalSix()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalSeven()
+	inline bool AActuator::doDigitalSeven()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalEight()
+	inline bool AActuator::doDigitalEight()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalNine()
+	inline bool AActuator::doDigitalNine()
 	{
 		return false;
 	}
 
-	inline bool IActuator::doDigitalZero()
+	inline bool AActuator::doDigitalZero()
 	{
 		return false;
 	}

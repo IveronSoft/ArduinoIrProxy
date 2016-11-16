@@ -1,12 +1,12 @@
 #pragma once
-#include "../IActuator.h"
+#include "../AActuator.h"
 
 
 namespace Firmware
 {
 	namespace Arduino
 	{
-		class ProMicro32U4 : IActuator
+		class ProMicro32U4 : AActuator
 		{
 		public:
 			ProMicro32U4();
