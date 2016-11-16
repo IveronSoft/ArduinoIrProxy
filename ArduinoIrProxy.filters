@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{b49dc044-a066-44b0-91db-47aca4276db9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\CambridgeAudioIrCodes">
+      <UniqueIdentifier>{76c80571-7f27-4f0c-b0a4-0d758a47caab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Firmware">
+      <UniqueIdentifier>{199b9f46-3355-4eaa-af90-1e76cdfad9e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Firmware\CambridgeAudio">
+      <UniqueIdentifier>{c80504c1-2e4c-4550-8528-91c2f0b6d8e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Firmware\Arduino">
+      <UniqueIdentifier>{336258b3-856c-44e1-bb8b-08d60b000156}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CambridgeAudioIrControl.ino" />
+    <None Include="..\..\..\..\..\Downloads\Topaz SR10 IR Codes.pdf">
+      <Filter>Resources\CambridgeAudioIrCodes</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Downloads\Topaz_CD5_CD10_IR_Remote_ControlCodes.pdf">
+      <Filter>Resources\CambridgeAudioIrCodes</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.CambridgeAudioIrControl.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteControlActions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IRemoteControl.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="Rc_Sr20_Cd5_Cd10.h">
+      <Filter>Firmware\CambridgeAudio</Filter>
+    </ClInclude>
+    <ClInclude Include="IActuator.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="ProMicro32U4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Temp_Code_Snippets.txt" />
+    <Text Include="todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Rc_Sr20_Cd5_Cd10.cpp">
+      <Filter>Firmware\CambridgeAudio</Filter>
+    </ClCompile>
+    <ClCompile Include="ProMicro32U4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

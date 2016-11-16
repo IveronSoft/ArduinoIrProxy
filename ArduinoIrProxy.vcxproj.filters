@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Firmware\CambridgeAudio\Rc_Sr20_Cd5_Cd10.cpp">
+      <Filter>Firmware\CambridgeAudio</Filter>
+    </ClCompile>
+    <ClCompile Include="Firmware\Arduino\ProMicro32U4.cpp">
+      <Filter>Firmware\Arduino</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.ArduinoIrProxy.vsarduino.h" />
+    <ClInclude Include="Firmware\IActuator.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="Firmware\IRemoteControl.h">
+      <Filter>Firmware</Filter>
+    </ClInclude>
+    <ClInclude Include="Firmware\CambridgeAudio\Rc_Sr20_Cd5_Cd10.h">
+      <Filter>Firmware\CambridgeAudio</Filter>
+    </ClInclude>
+    <ClInclude Include="Firmware\Arduino\ProMicro32U4.h">
+      <Filter>Firmware\Arduino</Filter>
+    </ClInclude>
+    <ClInclude Include="EUnifiedActions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArduinoIrProxy.ino" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Firmware">
+      <UniqueIdentifier>{ddd71218-35a3-430f-ac45-0a0fc90a4635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Firmware\CambridgeAudio">
+      <UniqueIdentifier>{6322f3dd-1e79-4d56-a542-8c9f282bcf5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Firmware\Arduino">
+      <UniqueIdentifier>{6fe3393c-36b2-4578-9be0-6aa4cf45b42e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
