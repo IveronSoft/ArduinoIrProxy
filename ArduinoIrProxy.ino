@@ -1,5 +1,6 @@
 #include "IRremote.h"
 #include "Firmware/CambridgeAudio/Rc_Sr20_Cd5_Cd10.h"
+#include "Firmware/Arduino/ProMicro32U4.h"
 
 #define DEBUG
 
@@ -13,6 +14,8 @@ decode_results decodedResults;
 Firmware::CambridgeAudio::Rc_Sr20_Cd5_Cd10 remoteControl;
 
 EUnifiedActions recievedCommand{EUnifiedActions::BUTTON_NOT_PRESSED};
+
+Firmware::Arduino::ProMicro32U4 actuator;
 
 
 void setup()
@@ -67,35 +70,41 @@ void loop()
 				#endif
 				break;
 
-			//case BUTTON_1:
-			//	break;
-			//case BUTTON_2:
-			//	break;
-			//case BUTTON_3:
-			//	break;
-			//case BUTTON_4:
-			//	break;
-			//case BUTTON_5:
-			//	break;
-			//case BUTTON_6:
-			//	break;
-			//case BUTTON_7:
-			//	break;
-			//case BUTTON_8:
-			//	break;
-			//case BUTTON_9:
-			//	break;
-			//case BUTTON_0:
-			//	break;
-			//case BUTTON_OPEN:
-			//	break;
-			//case BUTTON_CLOSE:
-			//	break;
+				//case BUTTON_1:
+				//	break;
+				//case BUTTON_2:
+				//	break;
+				//case BUTTON_3:
+				//	break;
+				//case BUTTON_4:
+				//	break;
+				//case BUTTON_5:
+				//	break;
+				//case BUTTON_6:
+				//	break;
+				//case BUTTON_7:
+				//	break;
+				//case BUTTON_8:
+				//	break;
+				//case BUTTON_9:
+				//	break;
+				//case BUTTON_0:
+				//	break;
+				//case BUTTON_OPEN:
+				//	break;
+				//case BUTTON_CLOSE:
+				//	break;
 
 			case BUTTON_PLAY:
 				#ifdef DEBUG
 				Serial.println("Loop::Button Play");
 				#endif
+				if (!actuator.doPlay())
+				{
+					#ifdef DEBUG
+					Serial.println("Loop::doPlay Returned False! Maybe not implemented?");
+					#endif
+				}
 
 				break;
 
@@ -104,12 +113,26 @@ void loop()
 				Serial.println("Loop::Button Pause");
 				#endif
 
+				if (!actuator.doPause())
+				{
+					#ifdef DEBUG
+					Serial.println("Loop::doPause Returned False! Maybe not implemented?");
+					#endif
+				}
+
 				break;
 
 			case BUTTON_STOP:
 				#ifdef DEBUG
 				Serial.println("Loop::Button Stop");
 				#endif
+				if (actuator.doStop())
+				{
+					#ifdef DEBUG
+					Serial.println("Loop::doStop Returned False! Maybe not implemented?");
+					#endif
+				}
+
 
 				break;
 
@@ -117,6 +140,12 @@ void loop()
 				#ifdef DEBUG
 				Serial.println("Loop::Button Next");
 				#endif
+				if (actuator.doNext())
+				{
+					#ifdef DEBUG
+					Serial.println("Loop::doNext Returned False! Maybe not implemented?");
+					#endif
+				}
 
 				break;
 
@@ -124,6 +153,13 @@ void loop()
 				#ifdef DEBUG
 				Serial.println("Loop::Button Prev");
 				#endif
+				if (actuator.doPrevious())
+				{
+					#ifdef DEBUG
+					Serial.println("Loop::doPrevious Returned False! Maybe not implemented?");
+					#endif
+				}
+
 
 				break;
 
@@ -131,6 +167,12 @@ void loop()
 				#ifdef DEBUG
 				Serial.println("Loop::Button Fwd");
 				#endif
+				if (actuator.doForward())
+				{
+					#ifdef DEBUG
+					Serial.println("Loop::doForward Returned False! Maybe not implemented?");
+					#endif
+				}
 
 				break;
 
@@ -138,61 +180,68 @@ void loop()
 				#ifdef DEBUG
 				Serial.println("Loop::Button Rew");
 				#endif
+				if (actuator.doRewind())
+				{
+					#ifdef DEBUG
+					Serial.println("Loop::doRewind Returned False! Maybe not implemented?");
+					#endif
+				}
+
 
 				break;
 
-			//case BUTTON_MUTE:
-			//	break;
-			//case BUTTON_SEL_SPKRS:
-			//	break;
-			//case BUTTON_STEREO_MONO:
-			//	break;
-			//case BUTTON_TUNER_MODE:
-			//	break;
-			//case BUTTON_VOL_UP:
-			//	break;
-			//case BUTTON_VOL_DOWN:
-			//	break;
-			//case BUTTON_TUNER_SCAN_UP:
-			//	break;
-			//case BUTTON_TUNER_SCAN_DOWN:
-			//	break;
-			//case BUTTON_PRESET_1:
-			//	break;
-			//case BUTTON_PRESET_2:
-			//	break;
-			//case BUTTON_PRESET_3:
-			//	break;
-			//case BUTTON_PRESET_4:
-			//	break;
-			//case BUTTON_PRESET_5:
-			//	break;
-			//case BUTTON_PRESET_6:
-			//	break;
-			//case BUTTON_PRESET_7:
-			//	break;
-			//case BUTTON_PRESET_8:
-			//	break;
-			//case BUTTON_PRESET_9:
-			//	break;
-			//case BUTTON_PRESET_0:
-			//	break;
-			//case BUTTON_SRC_SOURCE:
-			//	break;
-			//case BUTTON_SRC_CD:
-			//	break;
-			//case BUTTON_SRC_FM:
-			//	break;
-			//case BUTTON_SRC_AM:
-			//	break;
-			//case BUTTON_SRC_DVD:
-			//	break;
-			//case BUTTON_SRC_MP3:
-			//	break;
-			//case BUTTON_SRC_AUX:
-			//	break;
-			//case BUTTON_SRC_PHONO:
-			//	break;
+				//case BUTTON_MUTE:
+				//	break;
+				//case BUTTON_SEL_SPKRS:
+				//	break;
+				//case BUTTON_STEREO_MONO:
+				//	break;
+				//case BUTTON_TUNER_MODE:
+				//	break;
+				//case BUTTON_VOL_UP:
+				//	break;
+				//case BUTTON_VOL_DOWN:
+				//	break;
+				//case BUTTON_TUNER_SCAN_UP:
+				//	break;
+				//case BUTTON_TUNER_SCAN_DOWN:
+				//	break;
+				//case BUTTON_PRESET_1:
+				//	break;
+				//case BUTTON_PRESET_2:
+				//	break;
+				//case BUTTON_PRESET_3:
+				//	break;
+				//case BUTTON_PRESET_4:
+				//	break;
+				//case BUTTON_PRESET_5:
+				//	break;
+				//case BUTTON_PRESET_6:
+				//	break;
+				//case BUTTON_PRESET_7:
+				//	break;
+				//case BUTTON_PRESET_8:
+				//	break;
+				//case BUTTON_PRESET_9:
+				//	break;
+				//case BUTTON_PRESET_0:
+				//	break;
+				//case BUTTON_SRC_SELECT:
+				//	break;
+				//case BUTTON_SRC_CD:
+				//	break;
+				//case BUTTON_SRC_FM:
+				//	break;
+				//case BUTTON_SRC_AM:
+				//	break;
+				//case BUTTON_SRC_DVD:
+				//	break;
+				//case BUTTON_SRC_MP3:
+				//	break;
+				//case BUTTON_SRC_AUX:
+				//	break;
+				//case BUTTON_SRC_PHONO:
+				//	break;
 
 			default:
 				#ifdef DEBUG
