@@ -11,6 +11,13 @@ namespace Firmware
 		public:
 			ProMicro32U4();
 			virtual ~ProMicro32U4();
+
+			bool doPause() override;
+			bool doStop() override;
+			bool doNext() override;
+			bool doPrevious() override;
+			bool doForward() override;
+			bool doRewind() override;
 		};
 	}
 }
