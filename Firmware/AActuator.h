@@ -8,6 +8,7 @@ namespace Firmware
 		AActuator() {}
 		virtual ~AActuator() {}
 
+		inline virtual bool doPlay();
 		inline virtual bool doPause();
 		inline virtual bool doStop();
 		inline virtual bool doNext();
@@ -74,6 +75,11 @@ namespace Firmware
 		inline virtual bool doDigitalNine();
 		inline virtual bool doDigitalZero();
 	};
+
+	bool Firmware::AActuator::doPlay()
+	{
+		return false;
+	}
 
 	bool Firmware::AActuator::doPause()
 	{

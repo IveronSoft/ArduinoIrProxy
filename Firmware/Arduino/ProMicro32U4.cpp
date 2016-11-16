@@ -9,6 +9,11 @@ ProMicro32U4::ProMicro32U4()
 ProMicro32U4::~ProMicro32U4()
 {}
 
+bool ProMicro32U4::doPlay()
+{
+	return false;
+}
+
 bool ProMicro32U4::doPause()
 {
 	return false;

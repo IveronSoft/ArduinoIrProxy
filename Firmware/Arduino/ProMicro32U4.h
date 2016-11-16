@@ -12,6 +12,7 @@ namespace Firmware
 			ProMicro32U4();
 			virtual ~ProMicro32U4();
 
+			bool doPlay() override;
 			bool doPause() override;
 			bool doStop() override;
 			bool doNext() override;
